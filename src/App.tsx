@@ -1,12 +1,16 @@
+
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { renderRoutes } from 'react-router-config';
+import { BrowserRouter } from 'react-router-dom';
+import { unAuthorizedRoutes } from './configs/routes.config';
 
 function App() {
   return (
-    <div className="App">
-      Hello React
-    </div>
+    <React.StrictMode>
+      <BrowserRouter>
+        {renderRoutes(unAuthorizedRoutes)}
+      </BrowserRouter>
+    </React.StrictMode>
   );
 }
 
